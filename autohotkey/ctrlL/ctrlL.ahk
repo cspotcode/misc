@@ -61,12 +61,14 @@ return
 
 Menu_ToggleOnTop:
 Hotkey, LButton, Toggle
+SplashTextOn, , 45, Always-on-top, Click a window to toggle always-on-top
 return
 
 Hotkey_ToggleOnTop:
 MouseGetPos, , , temp
 WinSet, AlwaysOnTop, Toggle, ahk_id %temp%
 Hotkey, LButton, Off
+SplashTextOff
 return
 
 Menu_Reload:
