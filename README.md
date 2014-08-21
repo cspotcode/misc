@@ -26,3 +26,17 @@ To enable/disable "always-on-top" behavior for a window:
 * Right-click ctrlL's tray icon
 * Click "Toggle Always-on-top"
 * Click on a window
+
+### `powershell/powerplan.ps1` & `powershell/powerplan.cmd` ###
+
+Makes it easy to switch power plans from the command prompt.  I use this on my laptop when I frequently switch between "Power saver" for longer battery life and "High Performance" for heavier computing.  It's a wrapper around `powercfg.exe`, which requires specifying the plan's GUID to switch plans.
+
+**Usage:**
+```
+# To see a list of all power plans and which one is active:
+> powerplan
+# Switch to the "Power saver" plan (you can use partial plan names)
+> powerplan saver
+```
+
+The `.cmd` script is a redirect that invokes the PowerShell script from a `cmd.exe` prompt.  To use this script from both PowerShell and `cmd.exe`, add both files to your path.
